@@ -27,18 +27,12 @@ class  MainActivity : AppCompatActivity() {
 
     private fun setListeners() {
 
+        if (email != null && password != null) {
         login_button.setOnClickListener {
-            if (email != null && password != null) {
-
-                //email!!.text.toString()
+            email!!.text.toString()
                 val intent = Intent(this, NoteActivity::class.java)
                 startActivity(intent)
-            } else
-                Toast.makeText(
-                    applicationContext,
-                    "please enter valid details",
-                    Toast.LENGTH_LONG
-                ).show()
+            }
         }
     }
 }
